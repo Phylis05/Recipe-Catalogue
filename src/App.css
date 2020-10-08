@@ -62,7 +62,7 @@ button {
   font-size: 14px;
   text-decoration: none;
   padding: 10px;
-  background: blue;
+  background: darkgreen;
   justify-content: space-between;
   border: 1px solid white;
   border-radius: 5px;
@@ -73,12 +73,6 @@ button {
   color: white;
   text-decoration: none;
 }
-
-/* button:hover {
-  border: 1px solid transparent;
-  background-color: white;
-  color: black;
-} */
 
 button:focus {
   box-shadow: unset;
@@ -92,9 +86,7 @@ button:focus {
   margin: 0;
   text-decoration: none;
   border-radius: 5px;
-  border-bottom: rgb(43, 42, 42) 2px solid;
-  box-shadow: 1px 5px 9px 3px rgba(3, 3, 3, 0.6);
-  background-color: rgba(20, 20, 20, 1);
+  background-color: slategrey;
 }
 
 .logo-img {
@@ -104,7 +96,7 @@ button:focus {
 }
 
 .Nav-text {
-  color: rgb(253, 253, 253);
+  color: gold;
   font-weight: bolder;
   font-size: 3em;
   padding: 1px;
@@ -153,7 +145,7 @@ button:focus {
 
 .top-text {
   width: 100%;
-  color: black;
+  color: darkgreen;
   display: inline-block;
   font-size: 120%;
   text-decoration: none;
