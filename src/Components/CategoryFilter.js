@@ -1,13 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ onChange, value }) => {
-  const categories = ['Beef', 'Chicken', 'Dessert', 'Lamb', 'Miscellaneous', 'Pasta', 'Pork', 'Seafood', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Goat'];
+  const categories = ['Pasta', 'Pork', 'Seafood', 'Beef', 'Chicken', 'Dessert', 'Lamb', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Miscellaneous', 'Goat'];
   return (
-    <div className="d-flex justify-c">
-      <h1>Category Filter</h1>
+    <div className="cat-filter">
+      <h5>RECIPE CATEGORIES</h5>
       <select onChange={onChange} value={value} className="filter m-20">
-        {categories.map(e => <option key={Math.random() * 100} value={e}>{e}</option>)}
+        {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
       </select>
     </div>
   );
