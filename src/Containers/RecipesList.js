@@ -1,29 +1,23 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import MealPreview from '../components/Recipes';
-import fetchMeals from '../actions/allMeals';
-import fetchMeal from '../actions/meal';
-import { getMealsError, getMeals, getMealsPending } from '../constants/mealConstants';
-import { updateCategory } from '../actions/index';
-// import PageLoader from '../Components/Loading';
+import MealPreview from '../Components/Meal';
+import fetchAllMeals from '../Actions/allMeals';
+import fetchMeal from '../Actions/singleMeal';
+import { getProductsError, getProducts, getProductsPending } from '../Constants/Index';
+import { UPDATE_CATEGORY } from '../Actions/index';
 
-const RecipeCatalogue = props => {
+const MealsList = props => {
   const {
-    products, pending, fetchMeals, category,
+    products, pending, fetchAllMeals, category,
   } = props;
 
   useEffect(() => {
-    fetchMeals(category);
-  }, [category, fetchMeals]);
+    fetchAllMeals(category);
+  }, [category, fetchAllMeals]);
 
-  // const shouldComponentRender = () => {
-  //   if (category === undefined || pending === true) return false;
-  //   return true;
-  // };
-
-  // if (!shouldComponentRender()) { return <PageLoader />; }
   return (
     <div>
       <div className="container">
@@ -41,11 +35,11 @@ const RecipeCatalogue = props => {
   );
 };
 
-RecipeCatalogue.defaultProps = {
+MealsList.defaultProps = {
   products: [''],
 };
 
-RecipeCatalogue.propTypes = {
+MealsList.propTypes = {
   pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
   fetchAllMeals: PropTypes.func.isRequired,
@@ -56,21 +50,21 @@ const mapStateToProps = state => {
   const { allMeals } = state;
   return (
     {
-      error: getMealsError(allMeals),
-      products: getMeals(allMeals),
-      pending: getMealsPending(allMeals),
+      error: getProductsError(allMeals),
+      products: getProducts(allMeals),
+      pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
   );
 };
 
 const mapDispatchToProps = {
-  fetchMeals,
-  addFilter: updateCategory,
+  fetchAllMeals,
+  addFilter: UPDATE_CATEGORY,
   fetchMeal,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(RecipeCatalogue);
+)(MealsList);
