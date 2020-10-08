@@ -1,12 +1,10 @@
 import {
-  // fetchProductsPending,
   fetchSingleMeal,
-  fetchProductsError,
+  fetchRecipesError,
 } from './index';
 
 function fetchMeal(id) {
   return dispatch => {
-    // dispatch(fetchProductsPending());
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(response => response.json())
       .then(response => {
@@ -17,7 +15,7 @@ function fetchMeal(id) {
         return response;
       })
       .catch(error => {
-        dispatch(fetchProductsError(error));
+        dispatch(fetchRecipesError(error));
       });
   };
 }

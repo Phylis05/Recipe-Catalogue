@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const CategoryFilter = ({ onChange, value }) => {
   const categories = ['Pasta', 'Pork', 'Seafood', 'Beef', 'Chicken', 'Dessert', 'Lamb', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Miscellaneous', 'Goat'];
   return (
-    <div className="cat-filter">
-      <h5>RECIPE CATEGORIES</h5>
+    <div className="category-filter">
+      <h3>RECIPE CATEGORIES</h3>
       <select onChange={onChange} value={value} className="filter m-20">
         {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
       </select>

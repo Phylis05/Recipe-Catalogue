@@ -4,7 +4,7 @@ export const getProductsError = state => state.error;
 export const getImg = state => state.strMealThumb;
 export const getArea = state => state.strArea;
 export const getName = state => state.strMeal;
-export const getIntructions = state => state.strInstructions;
+export const getInstructions = state => state.strInstructions;
 export const getCategoriesList = state => state.categories;
 export const categoryName = category => category.strCategory;
 export const categoryDetails = category => category.strCategoryDescription;

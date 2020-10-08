@@ -8,7 +8,7 @@ import Image from '../Components/RecipeImage';
 import RecipeDetails from '../Components/RecipeDescription';
 import { resetSelected } from '../Actions/index';
 import {
-  getImg, getArea, getIntructions, getIngredient, getName, categoryName, getProductsPending,
+  getImg, getArea, getInstructions, getIngredient, getName, categoryName, getProductsPending,
 } from '../Constants/Index';
 
 const MealDetails = props => {
@@ -23,10 +23,10 @@ const MealDetails = props => {
   return (
     <div className="item-d">
       <div className="item-c">
-        <Image className="item-i shadow" src={img} name={name} />
+        <Image className="img-item shadow" src={img} name={name} />
         <div className="w-50">
-          <RecipeDetails category={category} className="ingridients" area={area} ingredients={ingredients} />
-          <div className="ingd-btns">
+          <RecipeDetails category={category} className="ingredients" area={area} ingredients={ingredients} />
+          <div className="ingredients-buttons">
             <Link to="/">
               <button type="button" onClick={resetSelected} className="shadow btn">Home</button>
             </Link>
@@ -47,7 +47,7 @@ const mapStateToProps = state => {
     {
       img: getImg(details),
       area: getArea(details),
-      intructions: getIntructions(details),
+      instructions: getInstructions(details),
       ingredients: getIngredient(details),
       name: getName(details),
       category: categoryName(details),

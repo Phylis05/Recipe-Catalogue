@@ -1,9 +1,9 @@
-const fetchProductsSuccess = products => ({
+const fetchRecipesSuccess = products => ({
   type: 'FETCH_PRODUCTS_SUCCESS',
   products,
 });
 
-const fetchProductsError = error => ({
+const fetchRecipesError = error => ({
   type: 'FETCH_PRODUCTS_ERROR',
   error,
 });
@@ -25,8 +25,8 @@ const fetchCategories = categories => ({
 const resetSelected = () => ({ type: 'RESET' });
 
 export {
-  fetchProductsError,
-  fetchProductsSuccess,
+  fetchRecipesError,
+  fetchRecipesSuccess,
   UPDATE_CATEGORY,
   fetchSingleMeal,
   resetSelected,

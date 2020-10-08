@@ -6,7 +6,7 @@ const Image = ({
   className, src, name,
 }) => (
   <div className={className}>
-    <img className="rcp-image" src={src} alt={name} />
+    <img className="recipe-img" src={src} alt={name} />
     <h1 className="top-text">{name}</h1>
   </div>
 );

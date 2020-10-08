@@ -6,29 +6,29 @@ const RecipeDetails = ({
   category, area, ingredients, className,
 }) => (
   <div className={className}>
-    <p className="text-b p-10">
-      <span className="m-10">
+    <p>
+      <span>
         Category :
       </span>
-      <span className="m-10 shadow ingredient">
+      <span>
         {category}
       </span>
     </p>
     <hr />
-    <p className="text-b p-10">
-      <span className="m-10">
+    <p>
+      <span>
         Area :
       </span>
-      <span className="m-10 shadow ingredient">
+      <span>
         {area}
       </span>
     </p>
     <hr />
-    <p className="text-b">
+    <p>
       Ingredients:
     </p>
     {ingredients.map(el => (
-      <span className="m-10 shadow ingredient" key={Math.random() * 1000}>
+      <span key={Math.random() * 1000}>
         {el}
         {' '}
         |

@@ -1,6 +1,6 @@
 import {
-  fetchProductsSuccess,
-  fetchProductsError,
+  fetchRecipesSuccess,
+  fetchRecipesError,
 } from './index';
 
 function fetchAllMeals(type) {
@@ -11,10 +11,10 @@ function fetchAllMeals(type) {
         if (response.error) {
           throw (response.error);
         }
-        dispatch(fetchProductsSuccess(response.meals));
+        dispatch(fetchRecipesSuccess(response.meals));
       })
       .catch(error => {
-        dispatch(fetchProductsError(error));
+        dispatch(fetchRecipesError(error));
       });
   };
 }

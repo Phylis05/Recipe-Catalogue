@@ -6,7 +6,7 @@ import Image from './RecipeImage';
 const MealInfo = ({
   src, name,
 }) => (
-  <Image className="category shadow" src={src} name={name} alt={name} />
+  <Image className="category" src={src} name={name} alt={name} />
 );
 
 MealInfo.propTypes = {

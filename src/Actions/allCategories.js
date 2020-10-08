@@ -1,6 +1,6 @@
 import {
   fetchCategories,
-  fetchProductsError,
+  fetchRecipesError,
 } from './index';
 
 function fetchAllCategories() {
@@ -14,7 +14,7 @@ function fetchAllCategories() {
         dispatch(fetchCategories(response.categories));
       })
       .catch(error => {
-        dispatch(fetchProductsError(error));
+        dispatch(fetchRecipesError(error));
       });
   };
 }

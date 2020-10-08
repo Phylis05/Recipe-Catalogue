@@ -95,7 +95,7 @@ button:focus {
   height: 60px;
 }
 
-.Nav-text {
+.nav-text {
   color: gold;
   font-weight: bolder;
   font-size: 3em;
@@ -116,6 +116,7 @@ button:focus {
 }
 
 .category {
+  /* height: 12em; */
   width: 22vw;
   margin-bottom: 20px;
   box-shadow: 1px 5px 9px 2px rgba(209, 209, 209, 1);
@@ -134,7 +135,7 @@ button:focus {
   margin-left: 1em;
 }
 
-.cat-filter {
+.category-filter {
   display: flex;
   border-radius: 4%;
   height: 7vh;
@@ -174,7 +175,7 @@ button:focus {
   /* background-color: rgb(241, 239, 239); */
 }
 
-.rcp-image {
+.recipe-img {
   width: 50%;
   border-radius: 50%;
 }
@@ -197,7 +198,7 @@ button:focus {
     margin-top: 3%;
 }
 
-.item-i {
+.img-item {
   width: 40%;
   height: 40%;
   margin: 0 auto;
@@ -284,7 +285,7 @@ button:focus {
   top: -857px;
 }
 
-.ingd-btns button {
+.ingredients-buttons button {
   margin-right: 20%;
   text-align: center;
   justify-content: center;
@@ -292,8 +293,4 @@ button:focus {
 
 .desc-p {
   width: 60%;
-}
-
-.m-b5 {
-  margin-bottom: 5%;
 }
