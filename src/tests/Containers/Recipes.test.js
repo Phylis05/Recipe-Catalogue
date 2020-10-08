@@ -12,7 +12,7 @@ const setup = () => {
   return component;
 };
 
-describe('Should not display content while app is loading', () => {
+describe('swhould not display content while app is loading', () => {
   let component;
   beforeEach(() => {
     component = setup();

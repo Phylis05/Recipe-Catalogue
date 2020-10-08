@@ -3,9 +3,9 @@ import {
   fetchSingleMeal,
 } from '../../Actions/index';
 
-describe('update category', () => {
-  it('should create an action to change category', () => {
-    const text = 'Beff';
+describe('update current category', () => {
+  it('create an action to change categories', () => {
+    const text = 'Code';
     const expectedAction = {
       type: 'UPDATE_CATEGORY',
       category: text,
@@ -15,8 +15,8 @@ describe('update category', () => {
 });
 
 describe('get recipe details', () => {
-  it('should get recipe details', () => {
-    const data = { name: 'chicken', category: 'Chicken' };
+  it('should give details for recipe', () => {
+    const data = { name: 'beef', category: 'Beef' };
     const expectedAction = {
       type: 'FETCH_MEAL_SUCCESS',
       details: data,

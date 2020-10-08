@@ -18,7 +18,7 @@ const {
 Enzyme.configure({ adapter: new Adapter() });
 const setup = () => {
   const component = shallow(
-    <RecipeDescription
+    <RecipeDetails
       ingredients={ingredients}
       category={category}
       area={area}
@@ -38,7 +38,7 @@ describe('Header Component', () => {
     expect(component.find('div').length).toBe(1);
   });
 
-  it('should render 6 span element', () => {
+  it('should render up to six span elements', () => {
     expect(component.find('span').length).toBe(6);
   });
 });

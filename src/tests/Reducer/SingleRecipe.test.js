@@ -8,6 +8,6 @@ const initialState = {
 
 describe('update category', () => {
   it('should show a single recipe', () => {
-    expect(singleRecipeReducer(initialState, { type: 'FETCH_MEAL_SUCCESS', details: { a: 'e', b: 'bee' } })).toEqual({ ...initialState, details: { a: 'e', b: 'bee' } });
+    expect(singleRecipeReducer(initialState, { type: 'FETCH_MEAL_SUCCESS', details: { x: 'oo', y: 'boo' } })).toEqual({ ...initialState, details: { x: 'oo', y: 'boo' } });
   });
 });

@@ -9,6 +9,6 @@ const initialState = {
 
 describe('update category', () => {
   it('should update the current state of products', () => {
-    expect(allMealsReducer(initialState, { type: 'FETCH_PRODUCTS_SUCCESS', products: ['beef', 'chicken'] })).toEqual({ ...initialState, pending: false, products: ['beef', 'chicken'] });
+    expect(allMealsReducer(initialState, { type: 'FETCH_PRODUCTS_SUCCESS', products: ['vegan', 'beef'] })).toEqual({ ...initialState, pending: false, products: ['vegan', 'beef'] });
   });
 });

@@ -18,7 +18,7 @@ describe('Header Component', () => {
   });
 
   it('should display one image', () => {
-    expect(component.find('img').hasClass('rcp-image')).toBe(true);
+    expect(component.find('img').hasClass('recipe-image')).toBe(true);
   });
 
   it('should display one header', () => {
