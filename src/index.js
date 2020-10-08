@@ -1,26 +1,18 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import App from './components/App';
-import rootreducer from './reducers/index';
-import './styles/index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-
-const store = createStore(
-  rootreducer,
-  composeWithDevTools(
-    applyMiddleware(thunk),
-  ),
-);
+import { BrowserRouter } from 'react-router-dom';
+import App from './Components/App';
+import store from './Reducers/Index';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root'),
 );
