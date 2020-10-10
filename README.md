@@ -10,9 +10,6 @@ This is a React web application where you can navigate the details of the differ
 ## Live demo
 [Live Link](https://phyl-recipe-book.herokuapp.com/)
 
-## Video Presentation
-[Video presentation]()
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Built with
